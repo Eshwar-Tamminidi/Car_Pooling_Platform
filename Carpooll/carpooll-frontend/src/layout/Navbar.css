@@ -1,0 +1,182 @@
+/* ================= NAVBAR BASE ================= */
+
+.navbar {
+  background: var(--navbar-bg);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ================= CONTAINER ================= */
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* ================= NAV LINKS ================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  color: var(--text);
+  text-decoration: none; /* ✅ remove underline */
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* compact */
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.navbar .nav-item svg {
+  stroke: currentColor;
+}
+
+/* ================= THEME TOGGLE ================= */
+
+.navbar button {
+  color: var(--text);
+}
+
+/* ================= PROFILE ================= */
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 🔧 FIX: remove square look */
+.profile-button {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  border-radius: 999px; /* ✅ force circular */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px; /* ✅ perfect circle */
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+/* Light mode border styling */
+[data-theme="light"] .profile-avatar {
+  border: 2px solid #cbd5e1;
+}
+
+.profile-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px; /* ✅ perfect circle */
+  background: var(--card-bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* ================= PROFILE MENU ================= */
+
+.profile-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 240px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 8px;
+  z-index: 300;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+/* 🔧 FIX: remove underline + tighten spacing */
+.profile-menu-item {
+  padding: 10px 12px;
+  color: var(--text);
+  text-decoration: none; /* ✅ remove underline */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* ✅ reduce icon-text gap */
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-menu-item svg {
+  flex-shrink: 0;
+}
+
+/* Hover */
+.profile-menu-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Divider */
+.profile-menu .border-t {
+  border-top: 1px solid var(--border);
+  margin: 6px 0;
+}
+
+/* 🔥 LOGOUT – clear danger style */
+.profile-menu-item.logout {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.profile-menu-item.logout:hover {
+  background: rgba(239,68,68,0.12);
+}
+
+/* ================= AUTH BUTTONS ================= */
+
+.navbar .btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.navbar .btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}

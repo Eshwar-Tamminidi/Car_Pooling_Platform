@@ -1,0 +1,82 @@
+/* src/pages/admin/Users.css */
+/* Mobile-first layout */
+.users-wrapper {
+  padding: 16px;
+}
+
+.users-wrapper h2 {
+  margin-bottom: 12px;
+}
+
+.user-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #145cad;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  margin-top: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #1b5e20;
+}
+
+/* Form */
+.form-wrapper {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper label {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.form-wrapper input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+/* Desktop grid */
+@media (min-width: 768px) {
+  .users-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .users-wrapper h2 {
+    grid-column: 1 / -1;
+  }
+}

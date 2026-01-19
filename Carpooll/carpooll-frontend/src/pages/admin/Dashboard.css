@@ -1,0 +1,160 @@
+/* ==================================================
+   ADMIN DASHBOARD – FULL THEME COMPATIBILITY
+   (NO JSX / NO LOGIC CHANGES)
+   ================================================== */
+
+/* ---------- BASE ---------- */
+.container {
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* ---------- LIGHT MODE ROOT ---------- */
+[data-theme="light"] .container {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ---------- HEADINGS ---------- */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4 {
+  color: #020617 !important;
+}
+
+/* ---------- TEXT ---------- */
+[data-theme="light"] p,
+[data-theme="light"] span,
+[data-theme="light"] td,
+[data-theme="light"] th,
+[data-theme="light"] div {
+  color: #334155;
+}
+
+/* ---------- CARDS ---------- */
+[data-theme="light"] .card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* ---------- TAB BUTTONS ---------- */
+[data-theme="light"] button.btn {
+  background: #e2e8f0 !important;
+  color: #020617 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="light"] button.btn[style*="#3b82f6"] {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] button.btn[style*="#10b981"] {
+  background: #059669 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] button.btn[style*="#ef4444"] {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* ---------- INLINE DARK BACKGROUNDS FIX ---------- */
+[data-theme="light"] [style*="rgba(255,255,255,0.03)"] {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* ---------- INPUTS / SEARCH / SELECT ---------- */
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background: #ffffff !important;
+  color: #020617 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="light"] input::placeholder {
+  color: #64748b !important;
+}
+
+/* ---------- DATE / CALENDAR FIX ---------- */
+[data-theme="light"] input[type="date"] {
+  background: #ffffff !important;
+  color: #020617 !important;
+  border: 1px solid #cbd5e1 !important;
+  color-scheme: light;
+}
+
+/* ---------- TABLES ---------- */
+[data-theme="light"] table {
+  background: #ffffff !important;
+}
+
+[data-theme="light"] thead tr {
+  background: #f1f5f9 !important;
+}
+
+[data-theme="light"] th {
+  color: #020617 !important;
+  border-bottom: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="light"] td {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] tbody tr:hover td {
+  background: #e2e8f0 !important;
+}
+
+/* ---------- LINKS / ROUTES ---------- */
+[data-theme="light"] [style*="color:'#3b82f6'"],
+[data-theme="light"] [style*="color: '#3b82f6'"] {
+  color: #2563eb !important;
+}
+
+/* ---------- STATUS COLORS ---------- */
+[data-theme="light"] [style*="#10b981"] {
+  color: #059669 !important;
+}
+
+[data-theme="light"] [style*="#f59e0b"] {
+  color: #d97706 !important;
+}
+
+[data-theme="light"] [style*="#ef4444"] {
+  color: #dc2626 !important;
+}
+
+/* ---------- MODALS ---------- */
+[data-theme="light"] .modal-content {
+  background: #ffffff !important;
+  color: #020617 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .modal-overlay {
+  background: rgba(0,0,0,0.45);
+}
+
+/* ---------- MODAL TABLE FIX ---------- */
+[data-theme="light"] .modal-content table td,
+[data-theme="light"] .modal-content table th {
+  color: #020617 !important;
+}
+
+/* ---------- ICON VISIBILITY ---------- */
+[data-theme="light"] svg {
+  stroke: currentColor;
+}
+
+/* ---------- SCROLLBAR ---------- */
+[data-theme="light"] ::-webkit-scrollbar {
+  width: 8px;
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}

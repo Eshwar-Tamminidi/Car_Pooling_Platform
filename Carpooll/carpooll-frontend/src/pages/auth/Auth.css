@@ -1,0 +1,278 @@
+/* =========================================================
+   AUTH UI – LIGHT & DARK MODE (MOBILE FIRST)
+   Uses data-theme attribute
+   ========================================================= */
+
+/* ---- Page Container ---- */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg);
+  transition: background 0.3s ease;
+}
+
+/* DARK MODE */
+[data-theme="dark"] .auth-container {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+}
+
+/* LIGHT MODE */
+[data-theme="light"] .auth-container {
+  background: #f9fafb;
+}
+
+/* ---- Card ---- */
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card-bg);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: slideUp 0.35s ease-out;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+/* DARK MODE CARD */
+[data-theme="dark"] .auth-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #1e293b;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.75);
+}
+
+/* LIGHT MODE CARD */
+[data-theme="light"] .auth-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* LIGHT MODE MODAL CONTENT */
+[data-theme="light"] .modal-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+/* ---- Title ---- */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* DARK MODE TITLE */
+[data-theme="dark"] .auth-card h2 {
+  color: #60a5fa;
+}
+
+/* LIGHT MODE TITLE */
+[data-theme="light"] .auth-card h2 {
+  color: #1976d2;
+}
+
+/* ---- Form layout ---- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Label ---- */
+.auth-form label {
+  margin: 10px 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+/* DARK MODE LABEL */
+[data-theme="dark"] .auth-form label {
+  color: #cbd5f5;
+}
+
+/* LIGHT MODE LABEL */
+[data-theme="light"] .auth-form label {
+  color: #333333;
+}
+
+/* ---- Input fields ---- */
+.auth-form input,
+.auth-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.25s ease;
+  color: var(--text);
+}
+
+/* DARK MODE INPUTS */
+[data-theme="dark"] .auth-form input,
+[data-theme="dark"] .auth-select {
+  background: rgba(2, 6, 23, 0.85);
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+/* LIGHT MODE INPUTS */
+[data-theme="light"] .auth-form input,
+[data-theme="light"] .auth-select {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #020617;
+}
+
+/* PLACEHOLDER */
+.auth-form input::placeholder {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .auth-form input::placeholder {
+  color: #64748b;
+}
+
+/* FOCUS */
+.auth-form input:focus,
+.auth-select:focus {
+  border-color: #1976d2;
+  outline: none;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(25,118,210,0.15);
+}
+
+/* DARK MODE FOCUS */
+[data-theme="dark"] .auth-form input:focus,
+[data-theme="dark"] .auth-select:focus {
+  background: rgba(2, 6, 23, 0.95);
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.25);
+}
+
+/* ---- Button ---- */
+.btn {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: #1976d2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #145cad;
+  transform: translateY(-1px);
+}
+
+/* DARK MODE BUTTON */
+[data-theme="dark"] .btn {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+[data-theme="dark"] .btn:hover {
+  box-shadow: 0 10px 25px rgba(37,99,235,0.45);
+}
+
+/* ---- Footer Links ---- */
+.auth-footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+/* DARK MODE FOOTER */
+[data-theme="dark"] .auth-footer {
+  color: #94a3b8;
+}
+
+.auth-footer a {
+  color: #1976d2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .auth-footer a {
+  color: #60a5fa;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Mobile Animation ---- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLETS & SMALL LAPTOPS
+   ========================================================= */
+@media (min-width: 480px) {
+  .auth-card {
+    padding: 28px;
+    max-width: 420px;
+  }
+
+  .auth-card h2 {
+    font-size: 26px;
+  }
+}
+
+/* =========================================================
+   DESKTOP SCREENS
+   ========================================================= */
+@media (min-width: 768px) {
+  .auth-container {
+    padding: 40px;
+  }
+
+  .auth-card {
+    padding: 32px;
+    max-width: 440px;
+  }
+
+  .auth-card h2 {
+    font-size: 28px;
+  }
+}
+/* =========================================================
+   FORCE OVERRIDE INLINE FOCUS BACKGROUND (LOGIN / REGISTER)
+   ========================================================= */
+
+/* LIGHT MODE – NEVER allow dark background on focus */
+[data-theme="light"] .login-input:focus,
+[data-theme="light"] .login-input:hover,
+[data-theme="light"] .auth-container input:focus {
+  background-color: #ffffff !important;
+  color: #020617 !important;
+}
+
+/* DARK MODE – keep dark background but visible text */
+[data-theme="dark"] .login-input:focus,
+[data-theme="dark"] .login-input:hover {
+  background-color: rgba(2, 6, 23, 0.95) !important;
+  color: #f8fafc !important;
+}

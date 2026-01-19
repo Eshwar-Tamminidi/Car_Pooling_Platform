@@ -1,0 +1,256 @@
+/* ==================================================
+   TRANSACTIONS PAGE – FULLY SCOPED & THEME SAFE
+   ================================================== */
+
+.transactions-page {
+  color: var(--text);
+}
+
+/* ---------------- HEADER ---------------- */
+
+.transactions-page .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.transactions-page h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.transactions-page .subtext {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ---------------- CARD FIX (CRITICAL) ---------------- */
+
+.transactions-page .card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+/* REMOVE glass blur in LIGHT MODE */
+[data-theme="light"] .transactions-page .card {
+  backdrop-filter: none;
+  background: #ffffff;          /* 🔥 FORCE LIGHT */
+  border: 1px solid #e5e7eb;
+}
+
+/* ---------------- TABLE ---------------- */
+
+.transactions-page .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Head */
+.transactions-page th {
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+/* DARK */
+[data-theme="dark"] .transactions-page th {
+  background: rgba(255,255,255,0.04);
+  color: #cfe3ff;
+}
+
+/* LIGHT */
+[data-theme="light"] .transactions-page th {
+  background: #f8fafc;
+  color: #334155;
+}
+
+/* Table Cells */
+.transactions-page td {
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* Hover */
+[data-theme="dark"] .transactions-page tr:hover td {
+  background: rgba(255,255,255,0.04);
+}
+
+[data-theme="light"] .transactions-page tr:hover td {
+  background: #f1f5f9;
+}
+
+/* ---------------- MUTED TEXT ---------------- */
+
+.transactions-page .muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ---------------- TRANSACTION TYPE ---------------- */
+
+.transactions-page .tx-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Debit */
+.transactions-page .tx-debit {
+  background: rgba(239,68,68,0.12);
+  color: var(--danger);
+}
+
+/* Credit */
+.transactions-page .tx-credit {
+  background: rgba(16,185,129,0.12);
+  color: var(--success);
+}
+
+/* ---------------- AMOUNT ---------------- */
+
+.transactions-page .amount-debit {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.transactions-page .amount-credit {
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* ---------------- STATUS BADGES ---------------- */
+
+.transactions-page .badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.transactions-page .status-success {
+  background: rgba(16,185,129,0.15);
+  color: var(--success);
+}
+
+.transactions-page .status-failed {
+  background: rgba(239,68,68,0.15);
+  color: var(--danger);
+}
+
+.transactions-page .status-pending {
+  background: rgba(245,158,11,0.15);
+  color: #b45309;
+}
+
+/* ---------------- EMPTY STATE ---------------- */
+
+.transactions-page .empty-state {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+
+/* ==================================================
+   FORM / FILTER INPUT FIX (LIGHT MODE)
+   ================================================== */
+
+/* Base input styles inside transactions page */
+.transactions-page input,
+.transactions-page select,
+.transactions-page textarea {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* LIGHT MODE — FORCE CLEAN INPUTS */
+[data-theme="light"] .transactions-page input,
+[data-theme="light"] .transactions-page select,
+[data-theme="light"] .transactions-page textarea {
+  background: #ffffff;          /* 🔥 force white */
+  color: #0f172a;               /* readable text */
+  border: 1px solid #cbd5e1;    /* visible border */
+  box-shadow: none;
+}
+
+/* Placeholder text */
+[data-theme="light"] .transactions-page input::placeholder,
+[data-theme="light"] .transactions-page textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Focus state */
+.transactions-page input:focus,
+.transactions-page select:focus,
+.transactions-page textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+
+
+/* ==================================================
+   CALENDAR ICON FIX (CRITICAL)
+   ================================================== */
+
+/* Base calendar input */
+.transactions-page input[type="date"] {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* LIGHT MODE */
+[data-theme="light"] .transactions-page input[type="date"] {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+/* DARK MODE */
+[data-theme="dark"] .transactions-page input[type="date"] {
+  background: var(--card-bg);
+  color: #ffffff;
+}
+
+/* 🔥 FORCE CALENDAR ICON VISIBILITY (Chrome / Edge) */
+.transactions-page input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* Light mode icon */
+[data-theme="light"] .transactions-page input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);           /* black icon */
+}
+
+/* Dark mode icon */
+[data-theme="dark"] .transactions-page input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);           /* white icon */
+}
+
+/* Prevent browser dark overlay */
+.transactions-page input[type="date"]::-webkit-datetime-edit {
+  color: inherit;
+}
+
+/* Focus state */
+.transactions-page input[type="date"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}

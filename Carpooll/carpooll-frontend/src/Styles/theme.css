@@ -1,0 +1,78 @@
+/* ===============================
+   GLOBAL THEME VARIABLES
+   DEFAULT = DARK MODE
+   =============================== */
+
+:root {
+  --bg: #0b0b0f;
+  --bg-secondary: #141418;
+
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+
+  --navbar-bg: #000000;
+  --footer-bg: #020617;
+
+  --card-bg: #141418;
+  --border: #1f2937;
+
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  --input-bg: #141418;
+  --modal-bg: #0b0b0f;
+
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  
+  --popup-bg: rgba(15, 23, 42, 0.9);
+  --popup-title-color: #ffffff;
+  --popup-msg-color: #cbd5f5;
+  --modal-overlay: rgba(0,0,0,0.85);
+  --row-hover: rgba(255,255,255,0.02);
+}
+
+/* ===============================
+   LIGHT MODE
+   =============================== */
+
+[data-theme="light"] {
+  --bg: #f9fafb;
+  --bg-secondary: #ffffff;
+
+  --text: #111827;
+  --text-muted: #6b7280;
+
+  --navbar-bg: #ffffff;
+  --footer-bg: #f1f5f9;
+
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --input-bg: #ffffff;
+  --modal-bg: #ffffff;
+
+  --success: #059669;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+  
+  --popup-bg: #ffffff;
+  --popup-title-color: #111827;
+  --popup-msg-color: #6b7280;
+  --modal-overlay: rgba(0,0,0,0.70);
+  --row-hover: rgba(0,0,0,0.04);
+}
+
+/* ===============================
+   GLOBAL BASE
+   =============================== */
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
